@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'arial', 'sans-serif';
+}
+
+body{
+    overflow-x: hidden;
+
+}
+.corpo_site{
+    background-image: linear-gradient(0deg,black, red);
+    height: 1077px;
+}
+
+header{
+    background-color: black;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 200px;
+    height: 100px;
+    margin-left: 50px;
+}
+header div{
+    display: flex;
+    margin: 20px;
+    align-items: center;
+}
+header div h1{
+    color: white;
+    align-self: center;
+    margin: 0px 20px;
+    padding: 0px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+header div h1:hover ~ .dropdown, .dropdown:hover{
+    opacity: 1;
+    display: flex;
+}
+header div h1:hover{
+    background-color: red;
+}
+header div a img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+header div a .email{
+    width: 62px;
+    height: 62px;
+    margin-top: -2px;
+    margin-left: -2px;
+}
+.sino{
+    margin: 0px 20px;
+}
+.lupa{
+    margin-right: 20px;
+}
+header .dropdown{
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    margin: 0px;
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    transition: 1s all;
+    
+}
+header div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    
+}
+header div:nth-child(1) *{
+    margin: 10px;
+    color: white;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.01);
+}
+header div:nth-child(1) input{
+    font-size: 20px;
+    border-bottom: 1px solid white;
+}
+header div:nth-child(1) input:focus{
+    outline: none;
+}
+header div:nth-child(1) button{
+    transition: 1s all;
+    width: 100px;
+    padding: 10px;
+    align-self: center;
+    background-color: black;
+    font-weight: bold;
+}
+header div:nth-child(1) button:hover{
+    background-color: white;
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+}
+header .dropdown div:nth-child(2){
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+}
+header div:nth-child(2) p{
+    margin: 20px;
+    color: white;
+    cursor: pointer;
+}
+header div:nth-child(2) p:hover{
+    text-decoration: underline;
+}
+
+header .dropdown2{
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: -20px;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+header .dropdown2 input{
+    border: none;
+    margin: 10px;
+    padding: 10px;
+    border-bottom: white solid;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 80%;
+}
+header .dropdown2 input::placeholder{
+    color: white;
+    text-align: center;
+}
+header .dropdown2 input:hover{
+    outline: none;
+}
+header .dropdown2 input:focus{
+    outline: none;
+}
+.lupa:hover ~ .dropdown2, .dropdown2:hover{
+    display: flex;
+}
+
+.carrossel{
+    border: 1px solid;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    overflow: hidden;
+    margin-top: 80px;
+    border: none;
+}
+
+
+.carrossel img:first-child{
+    margin-left: 0px;
+    animation: anima 15s infinite;
+}
+
+
+@keyframes anima {
+    0% {margin-left: 0px;}
+    10% {margin-left: -50%;}
+
+}
+
+.cartazes{
+    width: 100%;
+    height: 500px;
+}
+
+.fel{
+    width: 350px;
+    height: 500px;
+}
+
+.avatar{
+    width: 100%;
+    height: 550px;
+}
+
+.adao{
+    width: 400px;
+    height: 500px;
+
+}
+
+.linkk{
+    text-decoration: none;
+    height: 100px;
+}
+
+
+.botao_sp{
+    width: 400px;
+    height: 100px;
+    margin-top: 23px;
+    margin-left: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 5px solid rgb(147, 10, 10);
+}
+
+.botao_sp:hover{
+    background-color: gray;
+    width: 400px;
+    height: 100px;
+}
+
+.texto_saopaulo{
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-left: 80px;
+    color: white;
+    
+}
+
+
+
+.opcoes{
+    color: white;
+    margin-top: 65px;
+    margin-right: 50px;
+    margin-left: 55px;
+}
+
+
+.botao_rj{
+    width: 400px;
+    height: 100px;
+    margin-top: 23px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 5px solid rgb(147, 10, 10);
+}
+
+.botao_rj:hover{
+    background-color: gray;
+    width: 400px;
+    height: 100px;
+}
+
+.texto_rj{
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-left: 55px;
+    color: white;
+}
+
+.bot{
+    display: flex;
+    width: 1550px;
+    height: 300px;
+    margin-top: 60px;
+    
+}
