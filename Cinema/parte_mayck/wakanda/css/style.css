@@ -1,0 +1,230 @@
+*{
+    margin: 0px;
+}
+header{
+    background-color: black;
+    height: 100px;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 200px;
+    height: 100px;
+    margin-left: 50px;
+}
+header div{
+    display: flex;
+    margin: 20px;
+    align-items: center;
+}
+header div h1{
+    color: white;
+    align-self: center;
+    margin: 0px 20px;
+    padding: 0px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+header div h1:hover ~ .dropdown, .dropdown:hover{
+    opacity: 1;
+    display: flex;
+}
+header div h1:hover{
+    background-color: red;
+}
+header div a img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+header div a .email{
+    width: 62px;
+    height: 62px;
+    margin-top: -2px;
+    margin-left: -2px;
+}
+.sino{
+    margin: 0px 20px;
+}
+.lupa{
+    margin-right: 20px;
+}
+header .dropdown{
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    margin: 0px;
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    transition: 1s all;
+    
+}
+header div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    
+}
+header div:nth-child(1) *{
+    margin: 10px;
+    color: white;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.01);
+}
+header div:nth-child(1) input{
+    font-size: 20px;
+    border-bottom: 1px solid white;
+}
+header div:nth-child(1) input:focus{
+    outline: none;
+}
+header div:nth-child(1) button{
+    transition: 1s all;
+    width: 100px;
+    padding: 10px;
+    align-self: center;
+    background-color: black;
+    font-weight: bold;
+}
+header div:nth-child(1) button:hover{
+    background-color: white;
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+}
+header .dropdown div:nth-child(2){
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+}
+header div:nth-child(2) p{
+    margin: 20px;
+    color: white;
+    cursor: pointer;
+}
+header div:nth-child(2) p:hover{
+    text-decoration: underline;
+}
+header .dropdown2{
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+header .dropdown2 input{
+    border: none;
+    margin: 10px;
+    padding: 10px;
+    border-bottom: white solid;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 80%;
+}
+header .dropdown2 input::placeholder{
+    color: white;
+    text-align: center;
+}
+header .dropdown2 input:hover{
+    outline: none;
+}
+header .dropdown2 input:focus{
+    outline: none;
+}
+.lupa:hover ~ .dropdown2, .dropdown2:hover{
+    display: flex;
+}
+
+
+main div{
+    padding: 20px;
+    background-color: rgb(29, 29, 29);
+    font-family: sans-serif;
+    color: white;
+}
+main .foto{
+    height: 450px;
+
+    background-image: url("../img/wakanda.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -300px;
+    background-attachment: fixed;
+
+}
+main .info{
+    display: flex;
+    color: black;
+}
+main .info div:nth-child(1){
+    margin-left: 50px;
+    width: 800px;
+}
+main .info div:nth-child(1) p{
+    font-size: 20px;
+    margin-top: 30px;
+}
+main .info div:nth-child(2) p{
+    font-size: 20px;
+    margin: 20px;
+    margin-left: 130px;
+}
+
+.informacoesTrailer {
+    margin: 30px 20px 30px 80px;
+    color: #fff;
+}
+
+.reexibicao {
+    margin-top: -80px;
+    margin-left: 120px;
+}
+
+.dia {
+    margin-top: -50px;
+    margin-left: 120px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.horario {
+    margin-left: 120px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 16px;
+}
+
+span {
+    border-style: solid ;
+    border-width: 1px;
+    border-color: #fff;
+    padding: 5px;
+    color: #fff;
+    background-color: black;
+    margin: 0px 5px 0px ;
+}
+
+pre {
+    columns: 2;
+}
+
+iframe {
+    box-shadow: 3px 3px 2px rgb(0, 0, 0);
+    margin-left: -50px;
+}
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px;
+}
