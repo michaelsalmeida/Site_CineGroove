@@ -1,0 +1,1009 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'arial', 'sans-serif';
+}
+body{ 
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* background-image: linear-gradient(to left,red, black); */
+    background-color: rgb(148, 3, 3);
+    box-sizing: border-box;
+    overflow-x: hidden;
+ 
+}
+
+a{
+    text-decoration: none;
+}
+
+/* HEADER ---------------------------- */
+header {
+    background-color: black;
+    height: 100px;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+}
+.logo{
+    width: 200px;
+    height: 100px;
+    margin-left: 50px;
+}
+header div{
+    display: flex;
+    margin: 20px;
+    align-items: center;
+}
+header div h1{
+    color: white;
+    align-self: center;
+    margin: 0px 20px;
+    padding: 0px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+header div h1:hover ~ .dropdown, .dropdown:hover{
+    opacity: 1;
+    display: flex;
+    z-index: 1;
+}
+header div h1:hover{
+    background-color: red;
+}
+header div a img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+header div a .email{
+    width: 62px;
+    height: 62px;
+    margin-top: -2px;
+    margin-left: -2px;
+}
+.sino{
+    margin: 0px 20px;
+}
+.lupa{
+    margin-right: 20px;
+}
+header .dropdown{
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    margin: 0px;
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    transition: 1s all;
+    
+}
+header div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    
+}
+header div:nth-child(1) *{
+    margin: 10px;
+    color: white;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.01);
+}
+header div:nth-child(1) input{
+    font-size: 20px;
+    border-bottom: 1px solid white;
+}
+header div:nth-child(1) input:focus{
+    outline: none;
+}
+header div:nth-child(1) button{
+    transition: 1s all;
+    width: 100px;
+    padding: 10px;
+    align-self: center;
+    background-color: black;
+    font-weight: bold;
+}
+header div:nth-child(1) button:hover{
+    background-color: white;
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+}
+header .dropdown div:nth-child(2){
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+}
+header div:nth-child(2) p{
+    margin: 20px;
+    color: white;
+    cursor: pointer;
+}
+header div:nth-child(2) p:hover{
+    text-decoration: underline;
+}
+header .dropdown2{
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    display: none;
+    z-index: 1;
+    /* position: static; */
+}
+header .dropdown2 input{
+    border: none;
+    margin: 10px;
+    padding: 10px;
+    border-bottom: white solid;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 80%;
+}
+header .dropdown2 input::placeholder{
+    color: white;
+    text-align: center;
+}
+header .dropdown2 input:hover{
+    outline: none;
+    position: absolute;
+    
+}
+header .dropdown2 input:focus{
+    outline: none;
+}
+.lupa:hover ~ .dropdown2, .dropdown2:hover{
+    display: flex;
+}
+
+
+/* ----CARROSSEL PRINCIPAL */
+
+#carrossel-principal{
+    width: 100vw;
+    height: 900px;
+    cursor: pointer;
+    /* margin-top: 20px; */
+    /* margin-right: 5px; */
+    /* position: static; */
+}
+
+.slider{
+    margin: 0 auto;
+    width: 100vw;
+    height: 850px;
+    overflow: hidden;
+    /* margin-left: 25px; */
+    /* border-radius: 6px; */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.826) ;
+}
+
+.slides{
+    width: 400%;
+    height: 550px;
+    display: flex;    
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+   width: 25%;
+   position: relative; 
+   transition: 2s;
+}
+
+.slide img {
+    width: 100vw;
+
+}
+
+/* .manual-navigation{ 
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+
+} */
+
+.manual-btn{
+    border: 2px solid#000;
+    padding: 5px;
+    border-radius:10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color:#000 ;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+/* .navigation-auto div{
+    border:2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor:pointer;
+    transition:0.7s ;
+} */
+
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px; 
+    display: flex;
+    justify-content: center;  
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+/* 
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #000;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #000;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #000;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #000;
+} */
+
+
+
+#texto{
+    font-size: 26px;
+    color: rgb(255, 248, 248);
+    font-weight: 700;
+    padding-left: 45px;
+    padding-top: 20px;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 10px white(0, 0, 0, 0.826) ;
+}
+
+
+#divisória{
+    width: 100vw;
+    height: 100px;
+    /* background-color: rgb(240, 0, 0); */
+    
+
+}
+.filmes-em-cartaz{
+    font-size: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    font-weight: 500;
+
+}
+
+#programação{
+    font-size: 20px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    font-weight: 500;
+    margin-top: 15px;
+    font-weight: 700;
+
+}
+
+.box-cards{
+    width: 1500px;
+    height: 600px;
+    /* background-color: aqua; */
+    margin-left: 5%;
+    margin-top: 5%;
+    display: flex
+}
+
+
+
+/* CARD 1---VINGADORES--------- */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+} 
+
+.container1{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    max-height: 300px;
+    color: white;
+    cursor: pointer;
+    margin-left: 0%;
+}
+
+.card{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 360px;
+    border-radius: 16px;
+    background-image: linear-gradient(to left, #333, black);
+    transition: all .5s;
+}
+
+
+.card .img{
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+    opacity: 0.7;
+    z-index: 2;
+    height: 200px;
+    transition: all .5s;
+    background-image: url("../img/Cards/adãonegro-card.jpg")
+}
+
+.card:hover .img{
+  opacity: 1; 
+  width: 400px;  
+}
+.card .img span{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+
+
+/* PARTE DE BAIXO DO CARD */
+
+.card .content{
+    padding:  0px 20px;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s;
+    transform: translateY(30px);
+    
+}
+
+.card .content p{
+    margin-bottom: 0;
+    padding-top: 10px;
+
+}
+
+.card .content .title{
+   
+   font-weight: bold;
+   font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+
+
+}
+
+.card .content .desc{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 100;
+    opacity: .8;
+    margin-top: 8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card:hover .content{
+    padding: 20px;
+    height: 260px;
+    transform: translateY(0px);
+}
+   
+
+
+.card .arrow{
+    padding: 15px;
+    font-size: 28px;
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+
+.card:hover .arrow{
+    transform: rotate(0);
+}
+
+.card:hover{
+    background-image: linear-gradient(grey, black);
+}
+
+.content .doze{
+    
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    background-color: orange;
+    border-radius: 4px;
+}
+
+.content .doze p{
+    margin-top: 10px;
+    padding-top: 4px;
+    padding-left: 3.5px;
+    color: black;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: .9;
+    
+    
+}
+
+.content .btn button{
+    font-size: 15px;
+    margin-left: 10px;
+    background: none;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 0px;
+    margin-top: 30px;
+    width: 300px;
+    height: 40px;
+    border-radius: 30px;
+}
+
+
+
+
+/* CARD 2 JONH WICK */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+} 
+
+.card-jonhwick{
+    /* background-color: aqua; */
+    width: 550px;
+    height: 500px;
+    margin-left: 25%;
+    margin-top: -72%;
+}
+.container2{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    max-height: 300px;
+    color: white;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.card2{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 360px;
+    border-radius: 16px;
+    background-image: linear-gradient(to left, green, black);
+    transition: all .5s;
+}
+
+
+.card2 .img2{
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+    opacity: 0.7;
+    z-index: 2;
+    height: 200px;
+    transition: all .5s;
+    background-image:url("../img/Cards/avatar2-card.jpg");
+}
+
+
+.card2:hover .img2{
+  opacity: 1; 
+  width: 400px;  
+}
+.card2 .img2 span{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+
+
+/* PARTE DE BAIXO DO CARD */
+
+.card2 .content2{
+    padding:  0px 20px;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s;
+    transform: translateY(30px);
+    
+}
+
+.card2 .content2 p{
+    margin-bottom: 0;
+    padding-top: 10px;
+
+}
+
+.card2 .content2 .title2{
+   
+   font-weight: bold;
+   font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+
+
+}
+
+.card2 .content2 .desc2{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 100;
+    opacity: .8;
+    margin-top: 8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card2:hover .content2{
+    padding: 20px;
+    height: 260px;
+    transform: translateY(0px);
+}
+   
+
+
+.card2 .arrow2{
+    padding: 15px;
+    font-size: 28px;
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+
+.card2:hover .arrow2{
+    transform: rotate(0);
+}
+
+.card2:hover{
+    background-image: linear-gradient( #4897f0, #002a59);
+}
+
+.content2 .doze2{
+    
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    background-color: yellow;
+    border-radius: 4px;
+}
+
+.content2 .doze2 p{
+    margin-top: 10px;
+    padding-top: 4px;
+    padding-left: 3.5px;
+    color: black;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: .9;
+    
+    
+}
+
+.content2 .btn2 button{
+    font-size: 15px;
+    margin-left: 10px;
+    background: none;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 0px;
+    margin-top: 30px;
+    width: 300px;
+    height: 40px;
+    border-radius: 30px;
+}
+
+/* CARD 03 */
+.felicidade{
+    /* background-color: aqua; */
+    width: 550px;
+    height: 500px;
+    margin-left: 55%;
+    margin-top: -33.5%;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+} 
+
+.container3{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    max-height: 300px;
+    color: white;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.card3{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 360px;
+    border-radius: 16px;
+    background-image: linear-gradient(to left, #333, black);
+    transition: all .5s;
+}
+
+
+.card3 .img3{
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+    opacity: 0.7;
+    z-index: 2;
+    height: 200px;
+    transition: all .5s;
+    background-image:url("../img/Cards/homem-aranha-card.jpg");
+}
+
+
+.card3:hover .img3{
+  opacity: 1; 
+  width: 400px;  
+}
+.card3 .img3 span{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+
+
+/* PARTE DE BAIXO DO CARD */
+
+.card3 .content3{
+    padding:  0px 20px;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s;
+    transform: translateY(30px);
+    
+}
+
+.card3 .content3 p{
+    margin-bottom: 0;
+    padding-top: 10px;
+
+}
+
+.card3 .content3 .title3{
+   
+   font-weight: bold;
+   font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+
+
+}
+
+.card3 .content3 .desc3{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 100;
+    opacity: .8;
+    margin-top: 8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card3:hover .content3{
+    padding: 20px;
+    height: 260px;
+    transform: translateY(0px);
+}
+   
+
+
+.card3 .arrow3{
+    padding: 15px;
+    font-size: 28px;
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+
+.card3:hover .arrow3{
+    transform: rotate(0);
+}
+
+.card3:hover{
+    background-image: linear-gradient( red, #650B1E);
+}
+
+.content3 .doze3{
+    
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    background-color: yellow;
+    border-radius: 4px;
+}
+
+.content3 .doze3 p{
+    margin-top: 10px;
+    padding-top: 4px;
+    padding-left: 3.5px;
+    color: black;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: .9;
+    
+    
+}
+
+.content3 .btn3 button{
+    font-size: 15px;
+    margin-left: 10px;
+    background: none;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 0px;
+    margin-top: 30px;
+    width: 300px;
+    height: 40px;
+    border-radius: 30px;
+}
+
+/* CARD 04 HORA DO RUSH */
+
+.rush{
+
+    /* background-color: aqua; */
+    width: 600px;
+    height: 500px;
+    margin-left: 110%;
+    margin-top: -195.5%;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+} 
+
+.container4{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    max-height: 300px;
+    color: white;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.card4{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 360px;
+    border-radius: 16px;
+    background-image: linear-gradient(to left, #333, black);
+    transition: all .5s;
+}
+
+
+.card4 .img4{
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+    opacity: 0.7;
+    z-index: 2;
+    height: 200px;
+    transition: all .5s;
+    background-image:url("../img/Cards/wakandaforever-card.jpg");
+}
+
+
+.card4:hover .img4{
+  opacity: 1; 
+  width: 400px;  
+}
+.card4 .img4 span{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+
+
+/* PARTE DE BAIXO DO CARD */
+
+.card4 .content4{
+    padding:  0px 20px;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s;
+    transform: translateY(30px);
+    
+}
+
+.card4 .content4 p{
+    margin-bottom: 0;
+    padding-top: 10px;
+
+}
+
+.card4 .content4 .title4{
+   
+   font-weight: bold;
+   font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+
+
+}
+
+.card4 .content4 .desc4{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 100;
+    opacity: .8;
+    margin-top: 8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card4:hover .content4{
+    padding: 20px;
+    height: 260px;
+    transform: translateY(0px);
+}
+   
+
+
+.card4 .arrow4{
+    padding: 15px;
+    font-size: 28px;
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+
+.card4:hover .arrow4{
+    transform: rotate(0);
+}
+
+.card4:hover{
+    background-image: linear-gradient( black, gray);
+}
+
+.content4 .doze4{
+    
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    background-color: orange;
+    border-radius: 4px;
+}
+
+.content4 .doze4 p{
+    margin-top: 10px;
+    padding-top: 4px;
+    padding-left: 3.5px;
+    color: black;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: .9;
+    
+    
+}
+
+.content4 .btn4 button{
+    font-size: 15px;
+    margin-left: 10px;
+    background: none;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 0px;
+    margin-top: 15px;
+    width: 300px;
+    height: 40px;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
